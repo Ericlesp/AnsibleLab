@@ -1,0 +1,6 @@
+[centos]
+
+[debian]
+192.168.192.4 ansible_user=antiddosmyrai hostname=debian-fastnetmon
+
+[ubuntu]
