@@ -3,8 +3,8 @@
 - name: Set a hostname
   hostname:
     name: "{{ hostname }}"
-  #notify:
-  #  - addInHostsFile
+  notify:
+    - addInHostsFile
 
 - name: 'Role: serverTools Softwares Uteis para administração do servidor - Debian'
   #tags: setup
