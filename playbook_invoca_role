@@ -4,6 +4,6 @@
   
   roles:
     - serverTools
-    #- mysql
+    - mysql
     #- apache
     #- php

@@ -62,7 +62,7 @@
       state: touch
       owner: antiddosmyrai
       group: antiddosmyrai
-      mode: 0755
+      mode: 755
       modification_time: preserve
       access_time: preserve
 
