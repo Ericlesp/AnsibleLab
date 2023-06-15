@@ -1,0 +1,7 @@
+---
+# vars file for apache
+site_folder: "/var/www/ericles_local"
+site_url: "www.ericles.local"
+site_domain: "ericles.local"
+log_prefix: "ericles-local"
+php_version: "7.3"
