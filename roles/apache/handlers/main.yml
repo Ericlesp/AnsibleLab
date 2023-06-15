@@ -5,14 +5,14 @@
     name: apache2
     enabled: yes
 
-# - name: 'addInHostsFile'
-#   lineinfile:
-#     path: /etc/hosts
-#     line: "{{ item }}"
-#     create: yes
-#   loop:
-#     - "{{inventory_hostname}} {{ site_url }}"
-#     - "{{inventory_hostname}} {{ site_domain }}"
+- name: 'addInHostsFile'
+  lineinfile:
+    path: /etc/hosts
+    line: "{{ item }}"
+    create: yes
+  loop:
+    - "{{inventory_hostname}} {{ site_url }}"
+    - "{{inventory_hostname}} {{ site_domain }}"
 
 # - name: 'addInHttpdFile'
 #   lineinfile:
@@ -49,14 +49,14 @@
     recurse: yes
   when: (ansible_facts['os_family'] == "Debian")
 
-# - name: 'enableSite'
-#   command: a2ensite {{ log_prefix }}.conf
+- name: 'enableSite'
+  command: a2ensite {{ log_prefix }}.conf
 
-# - name: 'reloadApache2'
-#   service:
-#     name: apache2
-#     state: reloaded
-#     enabled: yes
+- name: 'reloadApache2'
+  service:
+    name: apache2
+    state: reloaded
+    enabled: yes
 
 # - name: 'enableHttpd'
 #   service:
